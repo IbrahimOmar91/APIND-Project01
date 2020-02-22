@@ -1,6 +1,6 @@
 def print_results(results_dic, results_stats_dic, model, 
                   print_incorrect_dogs = False, print_incorrect_breed = False):   
-    print("\n\n ** Summary for CNN Model : {}",model)
+    print("\n\n ** Summary for CNN Model : " + model.upper())
     print(" Number of images : " + str(results_stats_dic['n_images']))
     print(" Number of Dog Images : " + str(results_stats_dic['n_dogs_img']))
     print(' Number of "Not-a" Dog Images : ' + str(results_stats_dic['n_notdogs_img']))
