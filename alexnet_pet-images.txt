@@ -361,16 +361,9 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
  Number of images : 40
  Number of Dog Images : 30
  Number of "Not-a" Dog Images : 10
- 100% Correct Dogs
- 100% Correct "not-a" dog
- 80% Correct Breed
-
-INCORRECT Dog Breed Assignment:
-Real:                     beagle   Classifier:               english foxhound
-Real:                     beagle   Classifier:  walker hound, walker foxhound
-Real:             boston terrier   Classifier:                        basenji
-Real:           golden retriever   Classifier:                tibetan mastiff
-Real:           golden retriever   Classifier:           afghan hound, afghan
-Real:             great pyrenees   Classifier:                         kuvasz
+pct_correct_dogs    : 100.000000
+pct_correct_notdogs : 100.000000
+pct_correct_breed   : 80.000000
+pct_matches         : 75.000000
 
 ** Total Elapsed Runtime: 0:0:2

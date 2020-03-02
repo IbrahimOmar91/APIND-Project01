@@ -361,12 +361,9 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
  Number of images : 40
  Number of Dog Images : 30
  Number of "Not-a" Dog Images : 10
- 100% Correct Dogs
- 100% Correct "not-a" dog
- 93% Correct Breed
+pct_correct_dogs    : 100.000000
+pct_correct_notdogs : 100.000000
+pct_correct_breed   : 93.333333
+pct_matches         : 87.500000
 
-INCORRECT Dog Breed Assignment:
-Real:                     beagle   Classifier:  walker hound, walker foxhound
-Real:             great pyrenees   Classifier:                         kuvasz
-
-** Total Elapsed Runtime: 0:0:26
+** Total Elapsed Runtime: 0:0:25

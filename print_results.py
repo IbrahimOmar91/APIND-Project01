@@ -5,20 +5,11 @@ def print_results(results_dic, results_stats_dic, model,
     print(" Number of Dog Images : " + str(results_stats_dic['n_dogs_img']))
     print(' Number of "Not-a" Dog Images : ' + str(results_stats_dic['n_notdogs_img']))
     
+    
     for key in results_stats_dic:
         if key.startswith( 'pct' ):
-            key_list = str(key[4:]).split("_")
-            if len(key_list) > 1:
-                if key_list[1] == "notdogs":
-                    key_list[1] = '"not-a" dog'
-                print(" " + str(int(results_stats_dic[key])) + '% ' 
-                      + key_list[0].capitalize() + " " + key_list[1].capitalize())
-            else:
-                if key_list[0] == "match":
-                    print(" " + str(int((results_stats_dic["pct_correct_dogs"] / 100 
-                                   * results_stats_dic["pct_correct_notdogs"] / 100)
-                                  * 100)) + "% " + key_list[0].capitalize())
-     
+            print("{:20}: {:3f}".format(key, results_stats_dic[key]))
+    '''
     if (print_incorrect_dogs and 
         ( (results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs'])
           != results_stats_dic['n_images'] ) 
@@ -33,13 +24,11 @@ def print_results(results_dic, results_stats_dic, model,
                 
                 print(results_dic)
                               
-    if (print_incorrect_breed and 
-        (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed']) 
-       ):
+    if (print_incorrect_breed and (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed'])):
         print("\nINCORRECT Dog Breed Assignment:")
         for key in results_dic:
             if ( sum(results_dic[key][3:]) == 2 and
                 results_dic[key][2] == 0 ):
                 print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0],
                                                           results_dic[key][1]))
-                
+    '''
